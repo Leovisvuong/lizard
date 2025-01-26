@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting.FullSerializer;
 
 public class ScoreManage : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class ScoreManage : MonoBehaviour
     }
     public static void AddScore(int amount) 
     {
+        
         amount*=boostAmount;
         if(remainingHP+amount<=30){
             remainingHP += amount;
@@ -69,9 +71,6 @@ public class ScoreManage : MonoBehaviour
         mover.isOver();
         gemSpawn.isOver();
         gemMover.isOver();
-        speedUp.isOver();
-        DoubleJump.isOver();
-        MegaStomach.isOver();
     }
 }
 

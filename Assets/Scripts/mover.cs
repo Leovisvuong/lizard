@@ -29,11 +29,13 @@ public class mover : MonoBehaviour
         else if(typeBoost==3){
             gemSpawn.boostStatus(true);
             ScoreManage.changeBoostAmount(2);
+            gemMover.SetStomachBoost(true);
         }
         else{
             gemSpawn.boostStatus(false);
             speed=7f;
             ScoreManage.changeBoostAmount(1);
+            gemMover.SetStomachBoost(false);
             canDoubleJump=false;
         }
     }
